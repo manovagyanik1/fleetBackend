@@ -1,5 +1,6 @@
 var express    = require('express');
 var bodyParser = require('body-parser');
+import sequelize from './utils/sequelize';
 
 var app = express();
 
@@ -21,4 +22,6 @@ app.get('/', function(request, response){
 });
 
 app.listen(3000);
+sequelize.test();
+
 console.log('Server started...');
